@@ -66,3 +66,10 @@ This project includes a `CLAUDE.md` file that provides guidance to Claude Code (
 - Instructions for maintaining the functional programming style
 
 The `CLAUDE.md` file helps ensure consistent development practices when using AI assistance for solving new Kattis problems or maintaining existing solutions.
+
+## References
+
+This section lists articles and repositories that were studied while working on these solutions:
+
+- [Competitive Programming in Haskell: Scanner](https://byorgey.github.io/blog/posts/2019/05/22/competitive-programming-in-haskell-scanner.html) - Blog post about scanner utilities for competitive programming
+- [comprog-hs Scanner.hs](https://github.com/byorgey/comprog-hs/blob/master/Scanner.hs) - Scanner utilities were copied from this repository
