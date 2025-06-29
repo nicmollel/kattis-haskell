@@ -1,0 +1,72 @@
+cabal-version:      3.0
+name:               kattis-haskell
+-- The package version.
+-- See the Haskell package versioning policy (PVP) for standards
+-- guiding when and how versions should be incremented.
+-- https://pvp.haskell.org
+-- PVP summary:     +-+------- breaking API changes
+--                  | | +----- non-breaking API additions
+--                  | | | +--- code changes with no API change
+version:            0.1.0.0
+license:            NONE
+author:             Nic M
+maintainer:         nicdevel@gmail.com
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:  Scanner
+    build-depends: base ^>=4.20.0.0,
+                   mtl ^>=2.3.1,
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable submission
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base,
+        mtl
+    hs-source-dirs:   submission
+    default-language: Haskell2010
+
+executable different
+    import:           warnings
+    main-is:          Different.hs
+    ghc-options: -main-is Different
+    build-depends:
+        base
+    hs-source-dirs:   solutions
+    default-language: Haskell2010
+
+executable pot
+    import:           warnings
+    main-is:          Pot.hs
+    ghc-options: -main-is Pot
+    build-depends:
+        base
+    hs-source-dirs:   solutions
+    default-language: Haskell2010
+
+executable vote
+    import:           warnings
+    main-is:          Vote.hs
+    ghc-options: -main-is Vote
+    build-depends:
+        base,
+        kattis-haskell
+    hs-source-dirs:   solutions
+    default-language: Haskell2010
+
+test-suite kattis-haskell-test
+    import:           warnings
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.20.0.0,
+        kattis-haskell
