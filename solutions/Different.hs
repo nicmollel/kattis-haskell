@@ -11,5 +11,3 @@ main =
 
 solve :: [Integer] -> Integer
 solve [a, b] = abs (a - b)
-
--- >>> 212 `div` 10
