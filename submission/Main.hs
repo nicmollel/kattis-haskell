@@ -1,5 +1,5 @@
--- https://open.kattis.com/problems/tarifa
-{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
+-- https://open.kattis.com/problems/qaly
+{-# LANGUAGE TypeApplications #-}
 
 module Main where
 
@@ -8,7 +8,4 @@ import Control.Category ((>>>))
 main :: IO ()
 main =
   interact $
-    lines >>> map read >>> solve >>> show
-
-solve :: [Integer] -> Integer
-solve (x : n : ps) = x * (n + 1) - sum ps
+    lines >>> drop 1 >>> map (words >>> map (read @Double) >>> product) >>> sum >>> show
