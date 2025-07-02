@@ -1,4 +1,6 @@
--- https://open.kattis.com/problems/romans
+-- https://open.kattis.com/problems/tarifa
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
+
 module Main where
 
 import Control.Category ((>>>))
@@ -6,7 +8,7 @@ import Control.Category ((>>>))
 main :: IO ()
 main =
   interact $
-    read >>> solve >>> show
+    lines >>> map read >>> solve >>> show
 
-solve :: Double -> Integer
-solve x = round (x * 1000 * 5280 / 4854)
+solve :: [Integer] -> Integer
+solve (x : n : ps) = x * (n + 1) - sum ps
