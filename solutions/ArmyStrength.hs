@@ -38,10 +38,10 @@ solve [gz, mgz] = case compare (maximum gz) (maximum mgz) of
 -- >>> chunksOf 5 [1,2,3]
 
 chunksOf :: Int -> [a] -> [[a]]
-chunksOf _ [] = []
-chunksOf n xs = go xs []
+chunksOf n xs
+  | n <= 0 = []
+  | otherwise = go xs
   where
-    go [] acc = [reverse acc]
-    go ys@(z : zs) acc
-      | length acc == n = reverse acc : go ys []
-      | otherwise = go zs (z : acc)
+    go [] = []
+    go ys = let (chunk, rest) = splitAt n ys
+            in chunk : go rest
