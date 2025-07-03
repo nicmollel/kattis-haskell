@@ -1,7 +1,7 @@
 module Vote where
 
 -- https://open.kattis.com/problems/vote
-import Control.Category ((>>>))
+import Control.Arrow ((>>>))
 import Scanner (Scanner, int, numberOf, runScannerWith)
 
 type Election = [Int]

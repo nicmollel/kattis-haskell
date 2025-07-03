@@ -3,7 +3,7 @@
 
 module Main where
 
-import Control.Category ((>>>))
+import Control.Arrow ((>>>))
 
 main :: IO ()
 main =

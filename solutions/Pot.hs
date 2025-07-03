@@ -1,7 +1,7 @@
 module Pot where
 
 -- https://open.kattis.com/problems/pot
-import Control.Category ((>>>))
+import Control.Arrow ((>>>))
 
 main :: IO ()
 main =

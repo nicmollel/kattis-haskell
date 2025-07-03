@@ -29,7 +29,8 @@ executable submission
     main-is:          Main.hs
     build-depends:
         base,
-        mtl
+        mtl,
+        split,
     hs-source-dirs:   submission
     default-language: Haskell2010
 
@@ -58,6 +59,17 @@ executable vote
     build-depends:
         base,
         kattis-haskell
+    hs-source-dirs:   solutions
+    default-language: Haskell2010
+
+executable armystrength
+    import:           warnings
+    main-is:          ArmyStrength.hs
+    ghc-options: -main-is ArmyStrength
+    build-depends:
+        base,
+        split ^>=0.2.5,
+        bytestring ^>=0.12.1.0,
     hs-source-dirs:   solutions
     default-language: Haskell2010
 

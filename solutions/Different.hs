@@ -1,8 +1,9 @@
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
+
 -- https://open.kattis.com/problems/different
 module Different where
 
-import Control.Category ((>>>))
+import Control.Arrow ((>>>))
 
 main :: IO ()
 main =

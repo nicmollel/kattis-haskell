@@ -14,5 +14,6 @@
     },
     "haskell.serverEnvironment": {
         "PATH": "${HOME}/.ghcup/bin:${HOME}/.cabal/bin/:${PATH}"
-    }
+    },
+    "haskell.plugin.eval.config.exception": true,
 }

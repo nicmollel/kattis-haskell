@@ -4,11 +4,12 @@ This repository contains Haskell solutions to competitive programming problems f
 
 ## Solved Problems
 
-| Problem             | Solution File                          | Kattis Link                                |
-| ------------------- | -------------------------------------- | ------------------------------------------ |
-| A Different Problem | [Different.hs](solutions/Different.hs) | https://open.kattis.com/problems/different |
-| Pot                 | [Pot.hs](solutions/Pot.hs)             | https://open.kattis.com/problems/pot       |
-| Popular Vote        | [Vote.hs](solutions/Vote.hs)           | https://open.kattis.com/problems/vote      |
+| Problem             | Solution File                                | Kattis Link                                                                                           |
+| ------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| A Different Problem | [Different.hs](solutions/Different.hs)       | https://open.kattis.com/problems/different                                                            |
+| Army Strength       | [ArmyStrength.hs](solutions/ArmyStrength.hs) | https://open.kattis.com/problems/armystrengthhard / https://open.kattis.com/problems/armystrengtheasy |
+| Pot                 | [Pot.hs](solutions/Pot.hs)                   | https://open.kattis.com/problems/pot                                                                  |
+| Popular Vote        | [Vote.hs](solutions/Vote.hs)                 | https://open.kattis.com/problems/vote                                                                 |
 
 ## Building and Running
 
@@ -87,4 +88,5 @@ This section lists articles and repositories that were studied while working on 
 
 - [Competitive Programming in Haskell: Scanner](https://byorgey.github.io/blog/posts/2019/05/22/competitive-programming-in-haskell-scanner.html) - Blog post about scanner utilities for competitive programming
 - [comprog-hs Scanner.hs](https://github.com/byorgey/comprog-hs/blob/master/Scanner.hs) - Scanner utilities were copied from this repository
+- [Competitive Programming in Haskell: reading large inputs with ByteString](https://byorgey.github.io/blog/posts/2019/10/12/competitive-programming-in-haskell-reading-large-inputs-with-bytestring.html) - When to abandon using `String` for efficiency
 - [Compititive Programming Book: Methods to solve](https://cpbook.net/methodstosolve) - hints on underlying theory to solve problems
