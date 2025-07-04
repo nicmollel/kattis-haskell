@@ -8,6 +8,7 @@ This repository contains Haskell solutions to competitive programming problems f
 | ------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | A Different Problem | [Different.hs](solutions/Different.hs)       | https://open.kattis.com/problems/different                                                            |
 | Army Strength       | [ArmyStrength.hs](solutions/ArmyStrength.hs) | https://open.kattis.com/problems/armystrengthhard / https://open.kattis.com/problems/armystrengtheasy |
+| Ceiling Function    | [Ceiling.hs](solutions/Ceiling.hs)           | https://open.kattis.com/problems/ceiling                                                              |
 | Pot                 | [Pot.hs](solutions/Pot.hs)                   | https://open.kattis.com/problems/pot                                                                  |
 | Popular Vote        | [Vote.hs](solutions/Vote.hs)                 | https://open.kattis.com/problems/vote                                                                 |
 
@@ -81,6 +82,23 @@ This project is all about learning, especially writing many small haskell progra
 3. I review the suggested improvements and adopt them as necessary.
 
 This process for me strikes a balance of learning concepts and then building directly on that knowledge to see how it could be improved. Ultimately, I hope it will improve my mastery of the language.
+
+## Configuration and Common Issues
+
+### Unicode Encoding Error with HLS Eval Plugin
+
+If you encounter the error `invalid argument (cannot encode character '\8216')` when using the Haskell Language Server eval plugin, add the following environment variables to your shell configuration:
+
+```shell
+export GHC_NO_UNICODE=true
+export GHC_CHARENC=GHC_NO_UNICODE
+```
+
+Add these lines to your shell configuration file (e.g., `~/.bashrc`, `~/.zshrc`, or `~/.profile`) and restart your terminal or source the configuration file.
+
+This error typically occurs when the HLS eval plugin tries to display Unicode characters that cannot be encoded in your terminal's character set. The environment variables disable Unicode output from GHC, resolving the encoding issue.
+
+For more information about GHC environment variables, see the [GHC User's Guide](https://downloads.haskell.org/ghc/latest/docs/users_guide/using.html#other-environment-variables).
 
 ## References
 

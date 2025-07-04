@@ -27,14 +27,24 @@ library
     hs-source-dirs:   src
     default-language: Haskell2010
 
-executable submission
+executable armystrength
     import:           warnings
-    main-is:          Main.hs
+    main-is:          ArmyStrength.hs
+    ghc-options: -main-is ArmyStrength
     build-depends:
         base,
-        mtl,
-        split,
-    hs-source-dirs:   submission
+        split ^>=0.2.5,
+        bytestring ^>=0.12.1.0,
+    hs-source-dirs:   solutions
+    default-language: Haskell2010
+
+executable ceiling
+    import:           warnings
+    main-is:          Ceiling.hs
+    ghc-options: -main-is Ceiling
+    build-depends:
+        base,
+    hs-source-dirs:   solutions
     default-language: Haskell2010
 
 executable different
@@ -55,6 +65,16 @@ executable pot
     hs-source-dirs:   solutions
     default-language: Haskell2010
 
+executable submission
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base,
+        mtl,
+        split,
+    hs-source-dirs:   submission
+    default-language: Haskell2010
+
 executable vote
     import:           warnings
     main-is:          Vote.hs
@@ -62,17 +82,6 @@ executable vote
     build-depends:
         base,
         kattis-haskell
-    hs-source-dirs:   solutions
-    default-language: Haskell2010
-
-executable armystrength
-    import:           warnings
-    main-is:          ArmyStrength.hs
-    ghc-options: -main-is ArmyStrength
-    build-depends:
-        base,
-        split ^>=0.2.5,
-        bytestring ^>=0.12.1.0,
     hs-source-dirs:   solutions
     default-language: Haskell2010
 

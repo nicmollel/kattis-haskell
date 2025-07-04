@@ -28,14 +28,19 @@ solve [gz, mgz] = case compare (maximum gz) (maximum mgz) of
 -- | Split a list into chunks of size n.
 --
 -- >>> chunksOf 3 [1,2,3,4,5,6,7,8,9]
+-- [[1,2,3],[4,5,6],[7,8,9]]
 
 -- >>> chunksOf 3 [1,2,3,4,5]
+-- [[1,2,3],[4,5]]
 --
 -- >>> chunksOf 2 []
+-- []
 --
 -- >>> chunksOf 1 [1,2,3]
+-- [[1],[2],[3]]
 --
 -- >>> chunksOf 5 [1,2,3]
+-- [[1,2,3]]
 
 chunksOf :: Int -> [a] -> [[a]]
 chunksOf n xs
